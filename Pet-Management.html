@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+<title>FurFind Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+<link rel="icon" type="image/png" href="images/Furfind-icon.png">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <div class="logo-container">
+        <img src="images/Furfind logo.png" alt="FurFind Logo">
+        <h3>Admin Panel</h3>   
+    <ul>
+    <li><a href="admin.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+    <li><a href="Pet-Management.html"><i class="fa-solid fa-paw"></i>Pets</a></li>
+    <li><a href="users.html"><i class="fa-solid fa-users"></i>Users</a></li>
+    <li><a href="settingsAdmin.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
+    <li><a href="Login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li></ul>
+
+    </aside>
+
+    <main class="content">
+        <h1>Pet Management</h1>
+        <div class="table-card">
+
+
+        <table>
+    <thead>
+        <tr>
+            <th>Pet Name</th>
+            <th>Age</th>
+            <th>Health Condition</th>
+            <th>Vaccination Status</th>
+            <th>Adoption Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+            <tbody id="petTable">
+            </tbody>
+        </table>
+
+
+    </div>
+    </main>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>

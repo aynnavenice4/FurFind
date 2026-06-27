@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+    <title>Adoption Form</title>
+    <link rel="stylesheet" href="furfind.css">
+<link rel="icon" type="image/png" href="images/Furfind-icon.png">
+</head>
+<body>
+
+    <section class="adoption-section-Adoption">
+
+    <div class="header-Adoption">
+    <div class="logo-wrapper-Adoption">
+        <img src="images/furfind-logo-green.png" alt="Fur Find Logo" class="logo-Adoption">
+        </div>
+        <h1 class="form-title-Adoption">ADOPTION FORM</h1>
+    </div>
+
+    
+    <div class="form-container-Adoption">
+    
+        <form action="adoption/submit" method="post" id="adoptionForm">
+
+            <div class="form-group-Adoption">
+
+                <label class="label-Adoption">
+                    Name <span>*</span>
+                </label>
+
+                <div class="row-Adoption">
+
+                    <div class="input-box-Adoption">
+                        <input type="text"
+       id="firstName-Adoption"
+       name="firstName"
+       placeholder="First"
+       required>
+                    </div>
+                    <div class="input-box-Adoption">
+                        <input type="text"
+       id="lastName-Adoption"
+       name="lastName"
+       placeholder="Last"
+       required>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group-Adoption">
+
+                <label class="label-Adoption">
+                    Address <span>*</span>
+                </label>
+                <input type="text"
+       id="address-Adoption"
+       name="address"
+       required>
+            </div>
+            <div class="row-Adoption">
+
+                <div class="form-group-Adoption half-Adoption">
+
+                    <label class="label-Adoption">
+                        Phone Number <span>*</span>
+                    </label>
+                    <input type="text"
+       id="phone-Adoption"
+       name="phone"
+       placeholder="+63"
+       required>
+                </div>
+
+                <div class="form-group-Adoption half-Adoption">
+                    <label class="label-Adoption">
+                        Email <span>*</span>
+                    </label>
+                    <input type="email"
+       id="email-Adoption"
+       name="email"
+       required>
+                </div>
+            </div>
+
+            <div class="reason-submit-Adoption">
+
+                <div class="form-group-Adoption reason-box-Adoption">
+                    <label class="label-Adoption">
+                        Reason for Adoption <span>*</span>
+                    </label>
+                    <textarea
+                    id="reason-Adoption"
+                    name="reason"
+                    maxlength="1000"
+                    required></textarea>
+
+                    <div class="char-counter-Adoption">
+                    <span id="charCount-Adoption">0</span>/1000</div>
+                </div>
+
+                <a href="javascript:void(0)" type="submit" class="submit-btn-Adoption" id="submitBtn">
+                    <i class="fa-solid fa-circle-check"></i>
+                    SUBMIT
+                </a>
+            </div>
+        </form>
+    </div>
+    <div id="warningMessage-Adoption" class="warning-message-Adoption">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Please complete all required fields.
+                </div>
+</section>
+
+
+<script src="form.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+<title>FurFind Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+<link rel="icon" type="image/png" href="images/Furfind-icon.png">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <div class="logo-container">
+        <img src="images/Furfind logo.png" alt="FurFind Logo">
+        <h3>Admin Panel</h3>   
+    <ul>
+    <li><a href="admin.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+    <li><a href="Pet-Management.html"><i class="fa-solid fa-paw"></i>Pets</a></li>
+    <li><a href="users.html"><i class="fa-solid fa-users"></i>Users</a></li>
+    <li><a href="#"><i class="fa-solid fa-gear"></i>Settings</a></li>
+    <li><a href="Login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li></ul>
+
+    </aside>
+
+    <main class="content">
+        <div class="topbar">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome back! Here's what's happening on FurFind 🐾</p>
+        </div>
+
+         <section class="stats-admin">
+
+        <div class="card-admin">
+            <i class="fa-solid fa-paw"></i>
+            <div>
+                <h3>8</h3>
+                <p>Total Pets</p>
+            </div>
+        </div>
+
+        <div class="card-admin">
+            <i class="fa-solid fa-heart"></i>
+            <div>
+                <h3>3</h3>
+                <p>Adopted Pets</p>
+            </div>
+        </div>
+
+        <div class="card-admin">
+            <i class="fa-solid fa-file-circle-check"></i>
+            <div>
+                <h3>2</h3>
+                <p>Pending</p>
+            </div>
+        </div>
+
+        <div class="card-admin">
+            <i class="fa-solid fa-users"></i>
+            <div>
+                <h3>1</h3>
+                <p>Registered Users</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="dashboard-grid-admin">
+
+        <div class="panel-admin">
+            <h2><i class="fa-solid fa-dog"></i> Featured Pets</h2>
+
+            <div class="pet-list-admin">
+
+                <div class="pet-card-admin">
+                    <i class="fa-solid fa-dog pet-icon-admin"></i>
+                    <h4>Max</h4>
+                    <p>Golden Retriever</p>
+                </div>
+
+                <div class="pet-card-admin">
+                    <i class="fa-solid fa-cat pet-icon-admin"></i>
+                    <h4>Luna</h4>
+                    <p>Persian Cat</p>
+                </div>
+
+                <div class="pet-card-admin">
+                    <i class="fa-solid fa-dog pet-icon-admin"></i>
+                    <h4>Bella</h4>
+                    <p>Beagle</p>
+                </div>
+
+                <div class="pet-card-admin">
+                    <i class="fa-solid fa-cat pet-icon-admin"></i>
+                    <h4>Oliver</h4>
+                    <p>British Shorthair</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="panel-admin">
+            <h2><i class="fa-solid fa-file-circle-check"></i> Recent Requests</h2>
+
+            <ul class="activity-list-admin">
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    Zayn Malik requested adoption of Max
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    Olivia Rodrigo requested adoption of Luna
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    Jennie Kim requested adoption of Bella
+                </li>
+            </ul>
+        </div>
+
+    </section>
+    <section class="panel-admin large-panel-admin">
+
+        <h2><i class="fa-solid fa-chart-line"></i> Recent Activity</h2>
+
+        <div class="activity-grid-admin">
+
+            <div class="activity-card-admin">
+                <i class="fa-solid fa-paw"></i>
+                <p>New pet added: Charlie</p>
+            </div>
+
+            <div class="activity-card-admin">
+                <i class="fa-solid fa-user-plus"></i>
+                <p>5 new users registered today</p>
+            </div>
+
+            <div class="activity-card-admin">
+                <i class="fa-solid fa-house"></i>
+                <p>2 successful adoptions this week</p>
+            </div>
+
+            <div class="activity-card-admin">
+                <i class="fa-solid fa-shield-cat"></i>
+                <p>All pet records updated</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    </main>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>

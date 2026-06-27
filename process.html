@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+    <title>Furfind Reuqest Sent</title>
+    <link rel="stylesheet" href="furfind.css">
+<link rel="icon" type="image/png" href="images/Furfind-icon.png">
+</head>
+<body>
+
+    <div class="page-container-request">
+
+        <div class="logo-request">
+            <img src="images/furfind-logo-green.png" alt="Fur Find Logo">
+        </div>
+
+        <div class="pets-request">
+            <img src="images/dogsNcats.png" alt="Pets">
+        </div>
+
+        <div class="success-card-request">
+
+            <div class="success-banner-request">
+                <h1>💌 Pawsome! Furever Starts Today!</h1>
+
+                <p id="petMessage">
+                    Loading pet information...
+                </p>
+            </div>
+
+            <div class="divider-request"></div>
+
+            <div class="message-request">
+                <p>
+                    Your interest in adoption helps improve the lives of 
+                    rescued animals <br>and supports animal welfare efforts.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-request">
+
+        <a href="home.html" class="home-btn-request">
+            Return Home
+        </a>
+
+    </div>
+
+    
+<script>
+
+async function loadPetName(){
+
+    const params = new URLSearchParams(window.location.search);
+
+    const id = params.get("id");
+
+    const message = document.getElementById("petMessage");
+
+    console.log("PROCESS PET ID:", id);
+
+
+    if(!id){
+
+        message.innerHTML = "Congratulations on your adoption!";
+        return;
+    }
+
+
+    try{
+        const response = await fetch(
+        `http://localhost:8085/pets/${id}`
+        );
+
+
+        if(!response.ok){
+            throw new Error("Pet not found");
+        }
+
+        const pet = await response.json();
+
+        console.log("PROCESS PET:", pet);
+
+        message.innerHTML =`Congratulations on adopting  <strong>${pet.name}</strong>!`;
+
+
+    }
+
+    catch(error){
+        console.error("PROCESS ERROR:",error);
+
+        message.innerHTML = "Congratulations on your adoption!";
+
+    }
+}
+
+loadPetName();
+</script>
+
+    
+</body>
+</html>

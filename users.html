@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+<title>FurFind Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+<link rel="icon" type="image/png" href="images/Furfind-icon.png">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <div class="logo-container">
+        <img src="images/Furfind logo.png" alt="FurFind Logo">
+        <h3>Admin Panel</h3>   
+    <ul>
+    <li><a href="admin.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+    <li><a href="Pet-Management.html"><i class="fa-solid fa-paw"></i>Pets</a></li>
+    <li><a href="users.html"><i class="fa-solid fa-users"></i>Users</a></li>
+    <li><a href="settingsAdmin.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
+    <li><a href="Login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li></ul>
+    </aside>
+
+    <main class="content">
+        <div class="topbar">
+        <h1>Users</h1>
+        <p>Manage FurFind users and monitor account activity.</p>
+    </div>
+
+    <section class="members-container-user">
+
+    <div class="members-header-user">
+        <h2>Community Members</h2>
+        <span>76 Registered Users</span>
+    </div>
+
+    <div class="members-list-user">
+
+        <div class="member-card-user">
+            <i class="fa-solid fa-user"></i>
+            <div>
+                <h3>Zayn Malik</h3>
+                <p>Zayn Malik@example.com</p>
+            </div>
+            <span class="member-status-active-user">Active</span>
+        </div>
+
+        <div class="member-card-user">
+            <i class="fa-solid fa-user"></i>
+            <div>
+                <h3>Deus Armand</h3>
+                <p>Deus Armand@example.com</p>
+            </div>
+            <span class="member-status-active-user">Active</span>
+        </div>
+
+        <div class="member-card-user">
+            <i class="fa-solid fa-user"></i>
+            <div>
+                <h3>Pha Pee P. Tee</h3>
+                <p>PhaPee@example.com</p>
+            </div>
+            <span class="member-status-pending-user">Pending</span>
+        </div>
+
+        <div class="member-card-user">
+            <i class="fa-solid fa-user"></i>
+            <div>
+                <h3>Alexa Demie</h3>
+                <p>Alexa Demie@example.com</p>
+            </div>
+            <span class="member-status-active-user">Active</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="feedback-section-user">
+
+    <div class="feedback-header-user">
+        <h2>User Feedback</h2>
+        <p>Recent comments from FurFind users</p>
+    </div>
+
+    <div class="feedback-grid-user">
+
+        <div class="feedback-card-user">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>
+                I had been thinking about adopting for months, 
+                but I didn't know where to start. FurFind made the 
+                process much easier by providing all the information I needed in one place. 
+                I found a cat that matched my lifestyle, and the application process was 
+                simple and straightforward.</p>
+            <h4>— Jennie Kim</h4>
+        </div>
+
+        <div class="feedback-card-user">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>
+                The website was easy to navigate and the pet profiles were detailed. 
+                I liked being able to learn about each animal's personality before applying. 
+                FurFind helped me find a dog that was a great fit for my family.</p>
+            <h4>— Zayn Malik</h4>
+        </div>
+
+        <div class="feedback-card-user">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>
+                Giving a rescued pet a second chance is a special feeling.
+                 Watching my dog settle into his new home and seeing his personality come out 
+                 more every day has been such a heartwarming experience.
+            </p>
+            <h4>— Alexa Demie</h4>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>

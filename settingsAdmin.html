@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+<title>FurFind Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+<link rel="icon" type="image/png" href="images/Furfind-icon.png">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <div class="logo-container">
+        <img src="images/Furfind logo.png" alt="FurFind Logo">
+        <h3>Admin Panel</h3>   
+    <ul>
+    <li><a href="admin.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+    <li><a href="Pet-Management.html"><i class="fa-solid fa-paw"></i>Pets</a></li>
+    <li><a href="users.html"><i class="fa-solid fa-users"></i>Users</a></li>
+    <li><a href="settingsAdmin.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
+    <li><a href="Login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li></ul>
+    </aside>
+
+    <main class="content">
+        <div class="topbar">
+        <h1>Settings</h1>
+    <p>Manage FurFind system preferences and administrator settings.</p>
+    </div>
+
+    <div class="settings-grid-settings">
+
+        <div class="settings-card-settings">
+            <h2>
+                <i class="fa-solid fa-user-gear"></i>
+                Admin Profile
+            </h2>
+
+            <label>Administrator Name</label>
+            <input type="text" value="Admin User">
+
+            <label>Email Address</label>
+            <input type="email" value="admin@furfind.com">
+
+            <label>Contact Number</label>
+            <input type="text" value="+63 912 345 6789">
+        </div>
+
+        <div class="settings-card-settings">
+            <h2>
+                <i class="fa-solid fa-paw"></i>
+                FurFind Settings
+            </h2>
+
+            <label>Website Name</label>
+            <input type="text" value="FurFind">
+
+            <label>Support Email</label>
+            <input type="email" value="support@furfind.com">
+
+            <label>Max Pets Per Page</label>
+            <input type="number" value="12">
+        </div>
+
+    </div>
+
+    <div class="settings-card-settings settings-wide-settings">
+
+        <h2>
+            <i class="fa-solid fa-bell"></i>
+            Notification Settings
+        </h2>
+
+        <div class="toggle-row-settings">
+            <span>Email Notifications</span>
+            <input type="checkbox" checked>
+        </div>
+
+        <div class="toggle-row-settings">
+            <span>Adoption Request Alerts</span>
+            <input type="checkbox" checked>
+        </div>
+
+        <div class="toggle-row-settings">
+            <span>New User Registration Alerts</span>
+            <input type="checkbox" checked>
+        </div>
+
+    </div>
+
+
+    <div class="settings-card-settings settings-wide-settings">
+
+        <h2>
+            <i class="fa-solid fa-shield-halved"></i>
+            Security Settings
+        </h2>
+
+        <label>New Password</label>
+        <input type="password" placeholder="Enter new password">
+
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm password">
+
+    </div>
+
+    <div class="settings-action-container-settings">
+    <button class="settings-save-button-settings">
+        <i class="fa-solid fa-floppy-disk"></i>
+        Save Changes
+    </button>
+    </div>  
+    </div>
+
+    </main>
+</div>
+<script>
+    const saveBtn = document.querySelector(".settings-save-button-settings");
+
+    if(saveBtn){
+    saveBtn.addEventListener("click", () => {
+        alert("Settings saved successfully!");
+        });
+        }
+    </script>
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Furfind Create account</title>
+    <link rel="stylesheet" href="furfind.css">
+    <link rel="icon" type="image/png" href="images/Furfind-icon.png">
+</head>
+<body>
+
+    <section class="container">
+
+    <div class="left-side">
+        <img src="images/Furfind_left-side.png" alt="Furdind paw design"></div>
+    <div class="right-side">
+
+        <div class="signup-box">
+            <div class="furfind-logo">
+                <img src="images/Furfind logo.png" alt="Fur Find Logo"></div>
+
+
+            <div class="input-box">
+                <div class="icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+
+            
+            
+            <div class="input-box">
+                <div class="icon">
+                    <i class="fa-solid fa-envelope"></i></div>
+                <input type="email" id="email" name="email" placeholder="Email Address" required></div>
+
+
+            <div class="input-box">
+                <div class="icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                    <span class="toggle-password" onclick="togglePassword()">
+            <i class="fa-solid fa-eye" id="eyeIcon"></i></span>
+            </div>
+            <button class="signup-btn" type="button" onclick="registerUser()">Sign Up</button>
+
+        </div>
+    </div>
+</section>
+
+   <script>
+    function togglePassword() {
+    const passwordInput = document.getElementById("password");
+    const eyeIcon = document.getElementById("eyeIcon");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.classList.replace("fa-eye", "fa-eye-slash");
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.classList.replace("fa-eye-slash", "fa-eye");
+    }}
+
+    function registerUser() {
+
+    const nameEl = document.getElementById("name");
+    const emailEl = document.getElementById("email");
+    const passEl = document.getElementById("password");
+
+    if (!nameEl || !emailEl || !passEl) {
+        alert("Missing input fields (check HTML IDs)");
+        return;
+    }
+
+    const name = nameEl.value.trim();
+    const email = emailEl.value.trim().toLowerCase();
+    const password = passEl.value.trim();
+
+    if (!name || !email || !password) {
+        alert("Please fill ALL fields!");
+        return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const exists = users.find(u =>
+        (u.email || "").toLowerCase() === email
+    );
+
+    if (exists) {
+        alert("Email already registered!");
+        return;
+    }
+
+    users.push({
+        name,
+        email,
+        password
+    });
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Account created successfully!");
+
+    window.location.href = "login.html";
+}
+    </script>
+ 
+</body>
+</html>

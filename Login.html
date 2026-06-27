@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Furfind Login</title>
+    <link rel="stylesheet" href="furfind.css">
+    <link rel="icon" type="image/png" href="images/Furfind-icon.png">
+</head>
+<body>
+
+ <section class="container">
+
+        <div class="left-side">
+        <img src="images/Furfind_left-side.png" alt="Furdind paw design"></div>
+        <div class="right-side">
+
+            <div class="login-box">
+            <div class="furfind-logo">
+            <img src="images/Furfind logo.png" alt="Fur Find Logo">
+            </div>
+
+            <div class="input-box">
+                <span class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                </span>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-box">
+                <span class="icon">
+                        <i class="fa-solid fa-lock"></i>
+                </span>
+                    <input type="password"  name="password" id="password" placeholder="Password" required>
+                    <span class="toggle-password" onclick="togglePassword()">
+            <i class="fa-solid fa-eye" id="eyeIcon"></i>
+        </span>
+                </div>
+                <button class="login-btn" type="button" onclick="loginUser()">Login</button>
+                <a href="Create account.html" class="create-account">Create Account</a>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+(function initAccounts() {
+
+    let users = JSON.parse(localStorage.getItem("users"));
+    if (!users || users.length === 0) {
+        users = [
+            {
+                name: "user",
+                email: "user@furfind.com",
+                password: "1234"
+            }
+        ];
+        localStorage.setItem("users", JSON.stringify(users));
+    }
+
+    let admins = JSON.parse(localStorage.getItem("admins"));
+    if (!admins || admins.length === 0) {
+        admins = [
+            {
+                email: "admin@furfind.com",
+                password: "admin123"
+            }
+        ];
+        localStorage.setItem("admins", JSON.stringify(admins));
+    }
+
+})();
+
+
+function loginUser() {
+
+    const email = document.getElementById("email").value.trim().toLowerCase();
+    const password = document.getElementById("password").value.trim();
+
+    if (!email || !password) {
+        alert("Please enter email and password!");
+        return;
+    }
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const admins = JSON.parse(localStorage.getItem("admins")) || [];
+
+    const admin = admins.find(a =>
+        a.email.toLowerCase() === email &&
+        a.password === password
+    );
+
+    if (admin) {
+        alert("Welcome Admin");
+
+        localStorage.setItem("loggedInAdmin", JSON.stringify(admin));
+
+        window.location.href = "admin.html";
+        return;
+    }
+
+    const user = users.find(u =>
+        u.email.toLowerCase() === email &&
+        u.password === password
+    );
+
+    if (user) {
+        alert("Welcome " + user.name);
+
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+        window.location.href = "home.html";
+        return;
+    }
+    alert("Invalid email or password");
+}
+
+
+function togglePassword() {
+
+    const input = document.getElementById("password");
+    const icon = document.getElementById("eyeIcon");
+
+    if (!input || !icon) return;
+
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    } else {
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    }
+}
+
+</script>
+
+</body>
+</html>

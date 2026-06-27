@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+    <title>Furfind Pets</title>
+    <link rel="stylesheet" href="furfind.css">
+    <link rel="icon" type="image/png" href="images/Furfind-icon.png">
+</head>
+<body>
+
+    <section class="adoption-section">
+
+    <div class="top-bar">
+
+         <div class="left-controls">
+        <div class="furfind-logo-2">
+            <a href="home.html"><img src="images/Furfind logo.png" alt="Fur Find"></a>
+        </div>
+        
+
+        <div class="control-btn">
+        <button id="allBtn" class="active">All</button>
+        <button id="catsBtn">Cats</button>
+       <button id="dogsBtn">Dogs</button>
+    </div>
+</div>
+
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text"  id="searchInput" placeholder="Search animals..." />
+        </div>
+    </div>
+
+      <div class="animal-grid">
+
+        <a href="pets-info.html?id=1" class="animal-card" data-type="dog">
+        <img src="images/milo.png" alt="Milo">
+        <h3>Milo</h3>
+        </a>
+
+         <a href="pets-info.html?id=2" class="animal-card" data-type="cat">
+        <img src="images/bella.png" alt="Bella">
+        <h3>Bella</h3>
+        </a>
+
+        <a href="pets-info.html?id=3" class="animal-card" data-type="dog">
+        <img src="images/cooper.png" alt="Cooper">
+        <h3>Cooper</h3>
+        </a>
+
+        <a href="pets-info.html?id=4" class="animal-card" data-type="cat">
+        <img src="images/cloud.png" alt="Cloud">
+        <h3>Cloud</h3>
+        </a>
+
+    <a href="pets-info.html?id=5" class="animal-card" data-type="cat">
+        <img src="images/salem.png" alt="Salem">
+        <h3>Salem</h3>
+        </a>
+
+    <a href="pets-info.html?id=6" class="animal-card" data-type="dog">
+        <img src="images/zumi.png" alt="Zumi">
+        <h3>Zumi</h3>
+        </a>
+
+    <a href="pets-info.html?id=7" class="animal-card" data-type="cat">
+        <img src="images/simba.png" alt="Simba">
+        <h3>Simba</h3>
+        </a>
+
+    <a href="pets-info.html?id=8" class="animal-card" data-type="dog">
+        <img src="images/chloe.png" alt="Chloe">
+        <h3>Chloe</h3>
+        </a>
+    </div>
+
+    <p id="noResults" class="no-results">
+    No pets found 
+</p>
+</section>
+    
+<script src="pets.js"></script>
+</body>
+</html>
